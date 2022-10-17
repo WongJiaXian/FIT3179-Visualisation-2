@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Rating vs no. of ingredients",
+    "width": 400,
+    "height": 350,
+    "description": "Rating vs no. of ingredients",
+    "data": {
+        "url": "data/chocolate_bars.csv"
+        
+    },
+    "transform": [{"filter":"datum.num_ingredients > 0"}],
+    
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "num_ingredients", "type": "ordinal", "axis": {"labelAngle": 0}},
+      "y": {"aggregate":"average","field": "rating","scale":{"domain":[2.5,3.5]}},
+      "color":{"value":"#B6824E"},
+      "tooltip": [
+        {"field": "num_ingredients", "type": "ordinal"},
+        {"aggregate":"average","field": "rating","format":".2f"}
+      ]
+    }
+    
+
+
+  }

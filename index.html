@@ -1,15 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Tutle</title>
+  <title>Chocolates Around the World</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&family=Source+Serif+Pro:ital,wght@0,900;1,400&display=swap" rel="stylesheet">
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
 </head>
+
 <body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-top">
+        <h1>Chocolates Around the World</h1>
+        <p>Chocolates are one of the most desired foods in the world. There exists different variants of chocolate, 
+            each made and sourced from different parts of the world. This visualisation plans to look at them in detail.</p>
+      </div>
+    </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis1-1" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis1-2" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-right">
+            <h2>Bean Origin & Manufacturing Location</h2>
+            <p>Chocolates' main ingredient, cocoa beans, can be found natively in many countries. However, due to
+                several factors such as climate, soil, cultivation methods, etc, the chocolates that the beans are made
+                into can vary wildly in taste and quality.
+            </p>
+            <p> Manufacturing chocolates on the other hand, depends more on an area's culture and technological advances.
+                For example, different cultures have different ways of processing cocoa beans, some more effective than
+                others, and some can produce unique flavors. Technology also plays a part in a country's chocolate quality.
+                More advanced technology can produce new kinds of chocolate, or refine previous iterations of chocolate.
+              </p>
+          </div>
+        </div>
+        </div>
+        <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Cocoa Percentage</h2>
+          <p>All different chocolates share similar ingredients, yet each has its own unique flavor profile. The main
+            factor is due to the amount of cocoa used for each chocolate. While people has varying preferences, majority
+            prefers moderately high amount of cocoa in their chocolate, as too much can make chocolates bitter, or risk
+            overpowering the cocoa flavor with other ingredients if too little cocoa was used.
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Number of Ingredients</h2>
+          <p>Each chocolate not only varies in cocoa percentage, they also vary in the number of ingredients used.
+            Cocoa's distinctive flavor can be complimented by a variety of foods to produce wildly different unique
+            flavors. All the possible recipes of chocolate are delicious in their own way, but many can agree some 
+            recipes are better than others.  </p>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+          <div class="pure-u-1-2">
+            <div id="vis4-1" class="vis-container"></div>
+          </div>
+          <div class="pure-u-1-2">
+            <div id="vis4-2" class="vis-container"></div>
+          </div>
+        </div>
+        <!-- end pure grid group -->
     
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+              <div class="description description-right">
+                <h2>Amount of Chocolate in the World</h2>
+                <p>Chocolates are very popular among people, but they aren't easy to make on your own. Companies around the 
+                  world have tried to make a profit out of making and selling their own brand of chocolate with varying degree
+                  of success. In the above graph, it can be seen that some countries produce more chocolates than others. This 
+                  could be due to difference in local demand, technological accessability (how easy it is for competitors to aquire
+                  machinery needed) and many more factors.  
+                </p>    
+                  <p>Furthermore, companies also have preferences on where they source their cocoa beans. Even though each cocoa bean
+                  from each country is unique in their own way, companies discovered the majority of the population prefer beans
+                  from specific countries. Moreover, some countries also lack the abilty to grow and cultivate a variety of beans
+                  due to climate and other factors.
+                </p></div>
+            </div>
+            </div>
+            <!-- end pure grid group -->
+
+
+
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">Wong Jia Xian
+           30149770
+        </a>, adapted from FIT3179 Week 9 Studio. The datasource is 
+        <a href="https://www.kaggle.com/datasets/evangower/chocolate-bar-ratings" target=" _blank">from Kaggle</href>.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "scatterplot.json";
+    var map1 = "bean_origin_vs_rating.json";
+    var map2 = "manufacture_location_vs_rating.json";
+    var scatter = "scatterplot.json";
+    var bar = "bargraph.json";
+    var map4 = "manufacture_count.json";
+    var map3 = "bean_origin_count.json";
+    
+
+    vegaEmbed('#vis1-1', map1, { "actions": false });
+
+    vegaEmbed('#vis1-2', map2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', scatter, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', bar, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4-1', map3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4-2', map4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
 </body>
-    <h1>Had</h1>
-    <p>Para</p>
-    <p>Para2</p>
+
 </html>

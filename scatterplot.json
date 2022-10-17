@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Cocoa% against Rating",
+    "width": 400,
+    "height": 350,
+
+    "description": "A scatterplot showing ratings and cocoa% of chocolate bars.",
+    "data": {
+      "url": "data/chocolate_bars.csv"
+      
+    },
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "rating",
+        "type": "quantitative",
+        "scale": {"zero": false,"domain":[0,5]}
+        
+      },
+      "y": {
+        "field": "cocoa_percent",
+        "type": "quantitative",
+        "scale": {"zero": false,"domain":[0,100]}
+      },
+      "color":{"value":"#793D02"}
+  
+      ,
+      "tooltip": [
+        {"field": "bar_name", "type": "nominal"
+        },
+        {"field": "rating", "type": "quantitative"
+        },
+        {"field": "cocoa_percent", "type": "quantitative"}
+        ]
+      
+    }
+  }
+  
+
+    
